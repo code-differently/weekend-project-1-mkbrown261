@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
+       recieptcalculator recieptcalculator = new recieptcalculator();
        Scanner scanner = new Scanner(System.in);
        System.out.println("Welcome to Masons Tech Emporium!");
        System.out.println("What is your name");
@@ -12,8 +13,16 @@ public class Main {
        double budget = scanner.nextDouble();
        System.out.println("Enter your 5 digit rewards number");
        double rewardnumber = scanner.nextInt();
-       recieptcalculator recieptcalculator = new recieptcalculator();
-       System.out.println(recieptcalculator.generatethereceipt());
+       if (rewardnumber == recieptcalculator.rewardsmemnum){
+           recieptcalculator.rewardmember = true;
+           System.out.println(recieptcalculator.generatethereceipt());
+       } else {
+           System.out.println(recieptcalculator.generatethereceipt());
+       }
+
+
+
+
 
 
     }
