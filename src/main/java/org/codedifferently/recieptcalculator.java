@@ -10,7 +10,7 @@ public class recieptcalculator {
     private double tax;
     private double item2price;
     private double item3price;
-    public boolean rewardmember = true;
+    public boolean rewardmember = false;
     public double memberpricing;
     public recieptcalculator() {
         Random random = new Random();
@@ -37,24 +37,23 @@ public class recieptcalculator {
         reciept += "Price: $" +  (item2price) + "\n";
         reciept += "Price: $" +  (item3price) + "\n";
         reciept += "Tax rate:" +  (taxrate )  + "\n";
-        reciept += "Tax:" + calculatetax() +  "\n";
+        reciept += "Tax:" + calculatetax() +   "\n";
         if (rewardmember==true){
             memberpricing = calculatetotal() / 2;
             reciept += "Total: $" + memberpricing + "\n";
+
         }else {
             reciept += "Total: $" + calculatetotal() + "\n";
         }
         if (rewardmember == true) {
             memberpricing = calculatetotal() / 2;
-            reciept += "Total (Rounded):" + Round( memberpricing) + "\n";
+            reciept += "Total: $" + " " +  "(Rounded):" + Round( memberpricing) + "\n";
+
         }else{
-            reciept += "Total (Rounded):" + Round(calculatetotal()) + "\n";
+            reciept += "Total: $(Rounded):" + Round(calculatetotal()) + "\n";
 
 
         }
-
-
-
         return reciept;
 
     }
