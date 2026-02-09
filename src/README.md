@@ -1,4 +1,4 @@
-# Welcome to the overview of my random reciept generator!
+# Welcome to the overview of my random receipt generator!
 here we will be discussing how it works, how to use it and providing example output
 This calculator takes in a value for name, budget and if you are a rewards member when prompted.
 It then generates a random reciept including tax, tax rate, price of three different items and the price rounded.
